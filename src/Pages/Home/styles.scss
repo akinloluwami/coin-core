@@ -14,13 +14,20 @@
   .container {
     width: 95%;
     margin: auto;
+    overflow-y: scroll;
+    height: 100vh;
+    h1 {
+      font-weight: 500;
+    }
     .global-stat {
-      h1 {
-        font-weight: 500;
-      }
       .stat-row {
         display: flex;
         justify-content: space-between;
+      }
+    }
+    .top-coins {
+      .coin-row {
+        display: flex;
       }
     }
   }

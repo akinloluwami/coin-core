@@ -1,9 +1,15 @@
 import Stat from "../../components/Stat";
 import "./styles.scss";
-import { useGetCryptosQuery } from "../../services/cryptoApi";
+import { useGetCoinsQuery } from "../../services/cryptoApi";
+import millify from "millify";
+import Coins from "../Coins";
+import News from "../News";
+import Loading from "../../components/Loading";
 function Home() {
-  const { data, isFetching } = useGetCryptosQuery();
-  console.log(data);
+  const { data, isFetching } = useGetCoinsQuery();
+  const globalStats = data?.data?.stats;
+  if (isFetching) return <Loading />;
+  console.log(data, globalStats);
   return (
     <div className="Home">
       <div className="container">
@@ -12,31 +18,41 @@ function Home() {
           <div className="stat-row">
             <Stat
               title="Total Crytocurrencies"
-              value={5}
+              value={millify(globalStats.total)}
               icon="https://img.icons8.com/emoji/48/000000/coin-emoji.png"
             />
             <Stat
               title="Total Exchanges"
-              value={5}
+              value={millify(globalStats.totalExchanges)}
               icon="https://img.icons8.com/fluency/48/000000/exchange-bitcoin.png"
             />
 
             <Stat
               title="Total Market Cap"
-              value={5}
+              value={millify(globalStats.totalMarketCap)}
               icon="https://img.icons8.com/color-glass/48/000000/graph.png"
             />
             <Stat
               title="Total 24h Volume"
-              value={5}
+              value={millify(globalStats.total24hVolume)}
               icon="https://img.icons8.com/external-itim2101-flat-itim2101/64/000000/external-open-24-hours-time-management-itim2101-flat-itim2101.png"
             />
             <Stat
               title="Total Markets"
-              value={5}
+              value={millify(globalStats.totalMarkets)}
               icon="https://img.icons8.com/nolan/64/total-sales-1.png"
             />
           </div>
+        </div>
+        <div className="top-coins">
+          <h1>Top 10 Cryptocurrencies</h1>
+          <div className="coin-row">
+            <Coins simplified />
+          </div>
+        </div>
+        <div className="top-news">
+          <h1>Top Cryptocurrency News</h1>
+          <News simplified />
         </div>
       </div>
     </div>
