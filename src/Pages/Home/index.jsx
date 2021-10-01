@@ -1,6 +1,9 @@
 import Stat from "../../components/Stat";
 import "./styles.scss";
+import { useGetCryptosQuery } from "../../services/cryptoApi";
 function Home() {
+  const { data, isFetching } = useGetCryptosQuery();
+  console.log(data);
   return (
     <div className="Home">
       <div className="container">
