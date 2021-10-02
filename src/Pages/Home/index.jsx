@@ -6,7 +6,7 @@ import Coins from "../Coins";
 import News from "../News";
 import Loading from "../../components/Loading";
 function Home() {
-  const { data, isFetching } = useGetCoinsQuery();
+  const { data, isFetching } = useGetCoinsQuery(10);
   const globalStats = data?.data?.stats;
   if (isFetching) return <Loading />;
   console.log(data, globalStats);
@@ -46,9 +46,7 @@ function Home() {
         </div>
         <div className="top-coins">
           <h1>Top 10 Cryptocurrencies</h1>
-          <div className="coin-row">
-            <Coins simplified />
-          </div>
+          <Coins simplified />
         </div>
         <div className="top-news">
           <h1>Top Cryptocurrency News</h1>

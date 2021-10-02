@@ -36,13 +36,20 @@ function Navbar() {
         <Link to="/exchanges">
           {" "}
           <CgArrowsExchangeV />{" "}
-          <img src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/000000/external-exchange-cryptocurrency-vitaliy-gorbachev-blue-vitaly-gorbachev.png" />
+          <img
+            src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/000000/external-exchange-cryptocurrency-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
+            alt=""
+          />
           Exchanges
         </Link>
         <Link to="/news">
           {" "}
           <IoNewspaperOutline />{" "}
-          <img src="https://img.icons8.com/fluency/48/000000/news.png" /> News
+          <img
+            src="https://img.icons8.com/fluency/48/000000/news.png"
+            alt=""
+          />{" "}
+          News
         </Link>{" "}
       </div>
     </div>

@@ -1,8 +1,33 @@
-function News() {
+import moment from "moment";
+import { useGetNewsQuery } from "../../services/cryptoNewsApi";
+import Loading from "../../components/Loading";
+import NewsCard from "../../components/NewsCard";
+import "./styles.scss";
+function News({ simplified }) {
+  const { data: cryptoNews } = useGetNewsQuery({
+    newsCategory: "Cryptocurrency",
+    count: simplified ? 10 : 30,
+  });
+  const demoImage =
+    "http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg";
+  if (!cryptoNews?.value) return <Loading />;
   return (
-    <div>
-      <h1>News</h1>
-    </div>
+    <>
+      <div className="crypto-news">
+        {!simplified && <h1>Latest Crypto News</h1>}
+
+        <div className="news-row">
+          {cryptoNews.value.map((news) => (
+            <NewsCard
+              url={news.url}
+              name={news.name}
+              image={news?.image?.thumbnail?.contentUrl || demoImage}
+              // published={moment(news.datePublished).startOf("ss").fromNow()}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 

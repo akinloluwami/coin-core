@@ -1,4 +1,4 @@
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.scss";
 import Home from "./Pages/Home";
 import Coins from "./Pages/Coins";

@@ -5,3 +5,34 @@
   padding: 0;
   font-family: "Poppins";
 }
+body {
+  background-color: #242426;
+}
+.cryptocurrencies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  .coin-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+  }
+  .search-coin {
+    margin: 10px;
+    input {
+      width: 25rem;
+      padding: 0.5rem 0.7rem;
+      border-radius: 0.4rem;
+      outline: none;
+      border: none;
+      background-color: #49494b5b;
+      color: #d2d2d2;
+    }
+  }
+}
