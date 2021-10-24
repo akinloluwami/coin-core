@@ -20,11 +20,11 @@ function App() {
         <Route exact path="/exchanges">
           <Exchanges />
         </Route>
-        <Route exact path="/coin:coinId">
-          <CoinDetails />
-        </Route>
         <Route exact path="/news">
           <News />
+        </Route>
+        <Route exact path="/coin/:coinId">
+          <CoinDetails />
         </Route>
       </Switch>
     </div>

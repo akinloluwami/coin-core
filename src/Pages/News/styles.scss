@@ -10,6 +10,26 @@
   flex-direction: column;
   align-items: center;
   width: 80%;
+  .top-bar {
+    padding: 1rem 0;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    select {
+      width: 15rem;
+      outline: none;
+      border: none;
+      border-radius: 0.2rem;
+      color: #d2d2d2;
+      background-color: #49494b5b;
+      padding: 0.5rem;
+      option {
+        background-color: #49494b5b;
+        color: #d2d2d2;
+      }
+    }
+  }
   img {
     width: 100px;
     height: 100px;

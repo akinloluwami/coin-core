@@ -9,7 +9,6 @@ function Home() {
   const { data, isFetching } = useGetCoinsQuery(10);
   const globalStats = data?.data?.stats;
   if (isFetching) return <Loading />;
-  console.log(data, globalStats);
   return (
     <div className="Home">
       <div className="container">

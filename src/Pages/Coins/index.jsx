@@ -9,6 +9,7 @@ function Coins({ simplified }) {
   const count = simplified ? 10 : 100;
   const { data: cryptosList, isFetching } = useGetCoinsQuery(count);
   const [cryptos, setCryptos] = useState([]);
+
   const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
     const filteredData = cryptosList?.data.coins.filter((coin) =>
@@ -31,7 +32,7 @@ function Coins({ simplified }) {
 
         <div className="coin-row">
           {cryptos?.map((coin) => (
-            <Link to={`/coins/${coin.id}`}>
+            <Link key={coin.id} to={`/coin/${coin.id}`}>
               <Card
                 name={coin.name}
                 rank={coin.rank}

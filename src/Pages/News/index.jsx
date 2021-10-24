@@ -1,4 +1,3 @@
-import moment from "moment";
 import { useGetNewsQuery } from "../../services/cryptoNewsApi";
 import Loading from "../../components/Loading";
 import NewsCard from "../../components/NewsCard";
@@ -14,7 +13,18 @@ function News({ simplified }) {
   return (
     <>
       <div className="crypto-news">
-        {!simplified && <h1>Latest Crypto News</h1>}
+        <div className="top-bar">
+          {!simplified && <h1>Latest Crypto News</h1>}
+          {!simplified && (
+            <select>
+              <option value="">Bitcoin</option>
+              <option value="">Etherium</option>
+              <option value="">Dodge Coin</option>
+              <option value="">Litecoin</option>
+              <option value="">Aave</option>
+            </select>
+          )}
+        </div>
 
         <div className="news-row">
           {cryptoNews.value.map((news) => (
