@@ -18,6 +18,13 @@ function Coins({ simplified }) {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
   if (isFetching) return <Loading />;
+
+  // console.log(cryptos.change);
+  // // if (coin.change < 0) {
+  // //   coin.change = <b style={{ color: "#e75e5f" }}> {coinChange}% </b>;
+  // // } else {
+  // //   coin.change = <b style={{ color: "#52936d" }}> +{coin.change}% </b>;
+  // // }
   return (
     <>
       <div className="cryptocurrencies">
