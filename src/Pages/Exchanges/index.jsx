@@ -10,19 +10,6 @@ function Exchanges() {
   if (isFetching) return <Loading />;
 
   return (
-    // <div className="exchanges">
-    //   <h1>Exchanges</h1>
-    //   <table className="exchanges-table">
-    //     <tr className="table-heading">
-    //       <td>Exchanges</td>
-    //       <td>24h Trade Volume</td>
-    //       <td>Markets</td>
-    //       <td>Change</td>
-    //     </tr>
-
-    //
-    //   </table>
-    // </div>
     <Table striped bordered hover variant="dark">
       <thead>
         <tr>
@@ -38,7 +25,6 @@ function Exchanges() {
           <tr className="exchange" key={coin.symbol}>
             <td>{coin.rank}</td>
             <td className="coin-name-and-icon">
-              {" "}
               <img
                 src={coin.iconUrl}
                 alt={coin.symbol}

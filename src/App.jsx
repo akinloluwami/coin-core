@@ -6,10 +6,12 @@ import Exchanges from "./Pages/Exchanges";
 import CoinDetails from "./Pages/CoinDetails";
 import News from "./Pages/News";
 import Navbar from "./components/Navbar";
+import MobileNav from "./components/Navbar/MobileNav";
 function App() {
   return (
     <div className="app">
       <Navbar />
+      <MobileNav />
       <Switch>
         <Route exact path="/">
           <Home />

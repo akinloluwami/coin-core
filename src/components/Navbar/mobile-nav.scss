@@ -1,0 +1,15 @@
+@media only screen and (max-width: 600px) {
+  .mobile-nav {
+    height: 10vh;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    background-color: #272626;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    img {
+      width: 20px;
+    }
+  }
+}

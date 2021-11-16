@@ -37,12 +37,6 @@ function LineChart({ coinHistory, coinName, currentPrice }) {
   };
   return (
     <>
-      <div className="chart-header">
-        {/* <h2 className="chart.title">{coinName}</h2> */}
-        <div className="price-container">
-          {/* <h5 className="price-change">{coinHistory?.data?.change}%</h5> */}
-        </div>
-      </div>
       <Line data={data} options={options} />
     </>
   );
