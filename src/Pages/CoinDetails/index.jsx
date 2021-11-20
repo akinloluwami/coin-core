@@ -23,7 +23,7 @@ import LineChart from "../../components/LineChart";
 
 function CoinDetails() {
   const { coinId } = useParams();
-  const [timePeriod, setTimePeriod] = useState("7d");
+  const [timePeriod] = useState("7d");
   const { data, isFetching } = useGetCoinDetailsQuery(coinId);
   const { data: coinHistory } = useGetCoinHistoryQuery({
     coinId,
@@ -40,7 +40,7 @@ function CoinDetails() {
     coinChange = <b style={{ color: "#52936d" }}> +{coinChange}% </b>;
   }
 
-  const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
+  // const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 
   const stats = [
     {

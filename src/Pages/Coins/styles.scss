@@ -36,3 +36,9 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .cryptocurrencies {
+    width: 100%;
+  }
+}

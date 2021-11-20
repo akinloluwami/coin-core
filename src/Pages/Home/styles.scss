@@ -34,3 +34,20 @@
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  .Home {
+    width: 100%;
+    .container {
+      .global-stat {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .stat-row {
+          width: 100%;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

@@ -23,3 +23,8 @@ a {
     font-weight: 500;
   }
 }
+@media only screen and (max-width: 600px) {
+  .news-card {
+    width: 25rem;
+  }
+}

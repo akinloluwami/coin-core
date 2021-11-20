@@ -15,15 +15,6 @@ function News({ simplified }) {
       <div className="crypto-news">
         <div className="top-bar">
           {!simplified && <h1>Latest Crypto News</h1>}
-          {!simplified && (
-            <select>
-              <option value="">Bitcoin</option>
-              <option value="">Etherium</option>
-              <option value="">Dodge Coin</option>
-              <option value="">Litecoin</option>
-              <option value="">Aave</option>
-            </select>
-          )}
         </div>
 
         <div className="news-row">

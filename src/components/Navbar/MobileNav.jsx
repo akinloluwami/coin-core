@@ -1,8 +1,4 @@
 import "./mobile-nav.scss";
-import { FiHome } from "react-icons/fi";
-import { RiCopperCoinLine } from "react-icons/ri";
-import { CgArrowsExchangeV } from "react-icons/cg";
-import { IoNewspaperOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 function MobileNav() {
   return (
