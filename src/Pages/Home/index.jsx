@@ -28,12 +28,12 @@ function Home() {
 
             <Stat
               title="Total Market Cap"
-              value={millify(globalStats.totalMarketCap)}
+              value={`$ ${millify(globalStats.totalMarketCap)}`}
               icon="https://img.icons8.com/color-glass/48/000000/graph.png"
             />
             <Stat
               title="Total 24h Volume"
-              value={millify(globalStats.total24hVolume)}
+              value={`$ ${millify(globalStats.total24hVolume)}`}
               icon="https://img.icons8.com/external-itim2101-flat-itim2101/64/000000/external-open-24-hours-time-management-itim2101-flat-itim2101.png"
             />
             <Stat

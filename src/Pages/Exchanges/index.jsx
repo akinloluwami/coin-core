@@ -10,7 +10,7 @@ function Exchanges() {
   if (isFetching) return <Loading />;
 
   return (
-    <Table striped bordered hover variant="dark">
+    <table>
       <thead>
         <tr>
           <th>#</th>
@@ -22,9 +22,9 @@ function Exchanges() {
       </thead>
       <tbody>
         {exchanges.map((coin) => (
-          <tr className="exchange" key={coin.symbol}>
+          <tr key={coin.symbol}>
             <td>{coin.rank}</td>
-            <td className="coin-name-and-icon">
+            <td>
               <img
                 src={coin.iconUrl}
                 alt={coin.symbol}
@@ -38,7 +38,7 @@ function Exchanges() {
           </tr>
         ))}
       </tbody>
-    </Table>
+    </table>
   );
 }
 

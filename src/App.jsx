@@ -29,7 +29,7 @@ function App() {
           <CoinDetails />
         </Route>
       </Switch>
-      <h4 style={{ fontSize: "100px" }}>CoinCore</h4>
+      <h4 className="space">CoinCore</h4>
     </div>
   );
 }

@@ -10,10 +10,18 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
+  .space {
+    display: none;
+    font-size: 70px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .app {
     flex-direction: column;
+    .space {
+      display: block;
+      visibility: hidden;
+    }
   }
 }

@@ -139,3 +139,14 @@
     }
   }
 }
+@media only screen and (max-width: 600px) {
+  .coin-detail-container {
+    .coin-desc-link {
+      .coin-links {
+        .coin-link {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

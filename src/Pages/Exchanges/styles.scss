@@ -6,43 +6,23 @@
   font-family: "Poppins";
 }
 
-.exchanges {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  height: 100vh;
-  overflow-y: scroll;
-  h1 {
+table {
+  width: 100%;
+  thead {
     color: #d2d2d2;
-    font-weight: 500;
-    padding: 2rem 0 2rem 0;
-  }
-  .exchanges-table {
-    width: 90%;
-    margin: 0 auto;
-    .table-heading {
-      font-weight: 600;
-      font-size: 1.2rem;
-      display: flex;
-      justify-content: space-between;
+    tr {
+      th {
+        margin-left: 15px;
+      }
     }
-    .table-body {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      .exchange {
-        display: flex;
+  }
+  tbody {
+    tr {
+      background-color: #49494b5b;
 
-        padding: 1rem;
-        margin: 0.3rem;
-        background-color: rgba(128, 128, 128, 0.26);
-        border-radius: 0.5rem;
-        .coin-name-and-icon {
-          display: flex;
-          align-items: center;
-        }
+      td {
+        padding: 10px;
+        color: #d2d2d2;
       }
     }
   }
