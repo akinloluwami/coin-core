@@ -2,7 +2,6 @@ import millify from "millify";
 import Loading from "../../components/Loading";
 import { useGetExchangesQuery } from "../../services/cryptoApi";
 import "./styles.scss";
-import Table from "react-bootstrap/Table";
 function Exchanges() {
   const { data, isFetching } = useGetExchangesQuery();
   const exchanges = data?.data?.exchanges;
